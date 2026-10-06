@@ -1,0 +1,4 @@
+port,metric,history_end_year,forecast_year,forecast,method,wape_percent,baseline_wape_percent,baseline_skill_percent,mae,rmse,mean_error,holdouts,uncertainty_low,uncertainty_high,envelope_hits,envelope_evaluated_holdouts,status
+Conley,TEU,2025,2026,247405.0,last_year,21.266938541890248,21.266938541890248,0.0,49541.333333333336,59945.59349665884,9987.666666666666,6,139519.0,355291.0,3,5,exploratory_not_validated
+Conley,boxes,2025,2026,137632.0,last_year,21.500968592206803,21.500968592206803,0.0,28210.166666666668,33908.573274321054,6202.833333333333,6,75977.0,199287.0,3,5,exploratory_not_validated
+Guam,boxes,2025,2026,83574.0,last_year,1.216001705837756,1.216001705837756,0.0,1026.5,1219.0194830272403,1026.5,2,81890.0,85258.0,0,1,exploratory_not_validated

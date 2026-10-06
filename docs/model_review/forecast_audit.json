@@ -1,0 +1,746 @@
+{
+  "review_date": "2026-10-04",
+  "app_version": "0.2.0",
+  "source_workbook": "Port_Guam_Conley_History.xlsx",
+  "source_sha256": "d77005bc4224bcf13f439baa6379a41fc15cda616b8c9b46df689da2dc236138",
+  "observed_annual_records": 26,
+  "synthetic_annual_records_used": 0,
+  "historical_actual_end_year": 2025,
+  "evaluation_status": "retrospective_development_replay_not_independent_prospective_validation",
+  "source_notes": [
+    "Guam FY2020 85,143 boxes: observed; source G02. Port statistics reproduced by Guam economic agency.",
+    "Guam FY2021 86,794 boxes: observed; source G02. Port statistics reproduced by Guam economic agency.",
+    "Guam FY2022 89,052 boxes: observed; source G02. Port statistics reproduced by Guam economic agency.",
+    "Guam FY2023 85,627 boxes: observed; source G02. Port statistics reproduced by Guam economic agency.",
+    "Guam FY2024 85,258 boxes: observed; source G02. Port statistics reproduced by Guam economic agency.",
+    "Guam FY2025 83,574 boxes: observed; source G03. FY2025 count from PAG Board report.",
+    "Conley FY2016 140,967 boxes: observed; source C01. S-15 Containers; excludes over-the-road volumes.",
+    "Conley FY2016 250,439 TEU: observed; source C01. S-15 TEUs, same FY and port scope as boxes.",
+    "Conley FY2017 145,540 boxes: observed; source C01. S-15 Containers; excludes over-the-road volumes.",
+    "Conley FY2017 254,747 TEU: observed; source C01. S-15 TEUs, same FY and port scope as boxes.",
+    "Conley FY2018 161,130 boxes: observed; source C01. S-15 Containers; excludes over-the-road volumes.",
+    "Conley FY2018 281,978 TEU: observed; source C01. S-15 TEUs, same FY and port scope as boxes.",
+    "Conley FY2019 174,849 boxes: observed; source C01. S-15 Containers; excludes over-the-road volumes.",
+    "Conley FY2019 307,331 TEU: observed; source C01. S-15 TEUs, same FY and port scope as boxes.",
+    "Conley FY2020 161,171 boxes: observed; source C01. S-15 Containers; excludes over-the-road volumes.",
+    "Conley FY2020 283,061 TEU: observed; source C01. S-15 TEUs, same FY and port scope as boxes.",
+    "Conley FY2021 140,750 boxes: observed; source C01. S-15 Containers; excludes over-the-road volumes.",
+    "Conley FY2021 247,845 TEU: observed; source C01. S-15 TEUs, same FY and port scope as boxes.",
+    "Conley FY2022 79,095 boxes: observed; source C01. S-15 Containers; excludes over-the-road volumes.",
+    "Conley FY2022 139,959 TEU: observed; source C01. S-15 TEUs, same FY and port scope as boxes.",
+    "Conley FY2023 123,460 boxes: observed; source C01. S-15 Containers; excludes over-the-road volumes.",
+    "Conley FY2023 220,810 TEU: observed; source C01. S-15 TEUs, same FY and port scope as boxes.",
+    "Conley FY2024 145,117 boxes: observed; source C01. S-15 Containers; excludes over-the-road volumes.",
+    "Conley FY2024 258,620 TEU: observed; source C01. S-15 TEUs, same FY and port scope as boxes.",
+    "Conley FY2025 137,632 boxes: observed; source C01. S-15 Containers; excludes over-the-road volumes.",
+    "Conley FY2025 247,405 TEU: observed; source C01. S-15 TEUs, same FY and port scope as boxes.",
+    "Annual boxes and TEU are modeled separately. Annual history does not generate vessel arrivals, within-year seasonality or cargo per call."
+  ],
+  "legacy_policy": [
+    {
+      "port": "Conley",
+      "metric": "TEU",
+      "legacy_policy_wape_percent": 25.938185352126105
+    },
+    {
+      "port": "Conley",
+      "metric": "boxes",
+      "legacy_policy_wape_percent": 25.78040585601321
+    },
+    {
+      "port": "Guam",
+      "metric": "boxes",
+      "legacy_policy_wape_percent": 2.9445444781400107
+    }
+  ],
+  "forecasts": [
+    {
+      "port": "Conley",
+      "metric": "TEU",
+      "unit": "TEU",
+      "years": 10,
+      "history": [
+        {
+          "year": 2016,
+          "value": 250439
+        },
+        {
+          "year": 2017,
+          "value": 254747
+        },
+        {
+          "year": 2018,
+          "value": 281978
+        },
+        {
+          "year": 2019,
+          "value": 307331
+        },
+        {
+          "year": 2020,
+          "value": 283061
+        },
+        {
+          "year": 2021,
+          "value": 247845
+        },
+        {
+          "year": 2022,
+          "value": 139959
+        },
+        {
+          "year": 2023,
+          "value": 220810
+        },
+        {
+          "year": 2024,
+          "value": 258620
+        },
+        {
+          "year": 2025,
+          "value": 247405
+        }
+      ],
+      "history_end_year": 2025,
+      "forecast_year": 2026,
+      "forecast_horizon_years": 1,
+      "policy_method": "guarded_baseline_selection",
+      "evaluation_note": "Retrospective nested rolling-origin replay: every target was hidden from its fit and method selection. This development rerun is not independent prospective validation.",
+      "error_sign_note": "Error = forecast minus actual; positive mean error indicates overprediction.",
+      "metric_note": "MAE/RMSE are in the series unit. WAPE is total absolute error divided by total heldout actual volume; it is unavailable if every heldout actual is zero and is not an accuracy probability.",
+      "baseline_comparison_note": "Fixed methods and guarded policy are scored on identical outer fiscal years. Retrospective benchmark rankings do not select the production method.",
+      "method_notes": {
+        "last_year": "Last observed annual value (naive benchmark).",
+        "mean3": "Mean of the last three annual observations.",
+        "damped_trend": "Custom conservative trend: last value plus half the ordinary-least-squares slope over at most five annual observations; clipped at zero. This is not fitted Holt damped exponential smoothing."
+      },
+      "forecast": 247405.0,
+      "method": "last_year",
+      "status": "exploratory_not_validated",
+      "holdouts": 6,
+      "mae": 49541.333333333336,
+      "rmse": 59945.59349665884,
+      "mean_error": 9987.666666666666,
+      "wape_percent": 21.266938541890248,
+      "tested_first_year": 2020,
+      "tested_last_year": 2025,
+      "baseline_wape_percent": 21.266938541890248,
+      "baseline_mae": 49541.333333333336,
+      "baseline_skill_percent": 0.0,
+      "selection_details": {
+        "selected_method": "last_year",
+        "inner_holdouts": 7,
+        "candidate_mae": {
+          "last_year": 46085.857142857145,
+          "mean3": 46936.09523809523,
+          "damped_trend": 51293.5
+        },
+        "recent_inner_wins": {
+          "mean3": false,
+          "damped_trend": false
+        },
+        "minimum_inner_holdouts": 3,
+        "minimum_relative_mae_improvement": 0.05,
+        "required_latest_inner_wins": 2,
+        "threshold_status": "heuristic_prototype_guards",
+        "reason": "Keep last-year baseline: no challenger has lower earlier inner-holdout MAE.",
+        "inner_test_years": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ]
+      },
+      "method_comparison": [
+        {
+          "method": "last_year",
+          "holdouts": 6,
+          "mae": 49541.333333333336,
+          "rmse": 59945.59349665884,
+          "mean_error": 9987.666666666666,
+          "wape_percent": 21.266938541890248,
+          "next_forecast": 247405.0,
+          "method_note": "Last observed annual value (naive benchmark).",
+          "comparison_note": "Fixed methods and guarded policy are scored on identical outer fiscal years. Retrospective benchmark rankings do not select the production method."
+        },
+        {
+          "method": "mean3",
+          "holdouts": 6,
+          "mae": 47268.277777777774,
+          "rmse": 65937.46096660243,
+          "mean_error": 14468.388888888885,
+          "wape_percent": 20.29116882497436,
+          "next_forecast": 242278.33333333334,
+          "method_note": "Mean of the last three annual observations.",
+          "comparison_note": "Fixed methods and guarded policy are scored on identical outer fiscal years. Retrospective benchmark rankings do not select the production method."
+        },
+        {
+          "method": "damped_trend",
+          "holdouts": 6,
+          "mae": 56931.041666666664,
+          "rmse": 66956.23086861483,
+          "mean_error": 6382.908333333333,
+          "wape_percent": 24.439167918723616,
+          "next_forecast": 253294.05,
+          "method_note": "Custom conservative trend: last value plus half the ordinary-least-squares slope over at most five annual observations; clipped at zero. This is not fitted Holt damped exponential smoothing.",
+          "comparison_note": "Fixed methods and guarded policy are scored on identical outer fiscal years. Retrospective benchmark rankings do not select the production method."
+        }
+      ],
+      "envelope_evaluated_holdouts": 5,
+      "envelope_hits": 3,
+      "envelope_hit_rate_percent": 60.0,
+      "uncertainty_low": 139519.0,
+      "uncertainty_high": 355291.0,
+      "uncertainty_note": "Largest absolute guarded-policy outer-holdout error around the annual estimate; a historical error envelope, not a confidence interval. It measures past errors of the selection policy, not calibrated coverage for the latest method. Future error can exceed it. Earlier-holdout-only envelope hits are reported separately.",
+      "reasons": [
+        "Exploratory annual screening only; no operational calibration or vessel-level inference.",
+        "Three-inner-holdout, 5% MAE-margin and two-recent-win promotion controls are heuristic prototype choices.",
+        "Keep last-year baseline: no challenger has lower earlier inner-holdout MAE.",
+        "Historical nested-holdout WAPE exceeds the prototype 15% screen; this is not a published accuracy standard.",
+        "A recent annual change exceeded the prototype 25% screen.",
+        "The guarded policy matched the last-year benchmark on these heldout years."
+      ],
+      "backtests": [
+        {
+          "year": 2020,
+          "actual": 283061.0,
+          "forecast": 307331.0,
+          "method": "last_year",
+          "error": 24270.0,
+          "absolute_error": 24270.0,
+          "absolute_percentage_error": 8.57412359880026,
+          "train_last_year": 2019,
+          "train_years": 4,
+          "naive_forecast": 307331.0,
+          "naive_error": 24270.0,
+          "inner_holdouts": 1,
+          "selection_reason": "Keep last-year baseline: only 1 inner holdout(s); at least 3 required to promote a challenger.",
+          "uncertainty_low": null,
+          "uncertainty_high": null,
+          "envelope_hit": null
+        },
+        {
+          "year": 2021,
+          "actual": 247845.0,
+          "forecast": 283061.0,
+          "method": "last_year",
+          "error": 35216.0,
+          "absolute_error": 35216.0,
+          "absolute_percentage_error": 14.208880550343965,
+          "train_last_year": 2020,
+          "train_years": 5,
+          "naive_forecast": 283061.0,
+          "naive_error": 35216.0,
+          "inner_holdouts": 2,
+          "selection_reason": "Keep last-year baseline: only 2 inner holdout(s); at least 3 required to promote a challenger.",
+          "uncertainty_low": 258791.0,
+          "uncertainty_high": 307331.0,
+          "envelope_hit": false
+        },
+        {
+          "year": 2022,
+          "actual": 139959.0,
+          "forecast": 247845.0,
+          "method": "last_year",
+          "error": 107886.0,
+          "absolute_error": 107886.0,
+          "absolute_percentage_error": 77.08400317235763,
+          "train_last_year": 2021,
+          "train_years": 6,
+          "naive_forecast": 247845.0,
+          "naive_error": 107886.0,
+          "inner_holdouts": 3,
+          "selection_reason": "Keep last-year baseline: no challenger has lower earlier inner-holdout MAE.",
+          "uncertainty_low": 212629.0,
+          "uncertainty_high": 283061.0,
+          "envelope_hit": false
+        },
+        {
+          "year": 2023,
+          "actual": 220810.0,
+          "forecast": 139959.0,
+          "method": "last_year",
+          "error": -80851.0,
+          "absolute_error": 80851.0,
+          "absolute_percentage_error": 36.615642407499664,
+          "train_last_year": 2022,
+          "train_years": 7,
+          "naive_forecast": 139959.0,
+          "naive_error": -80851.0,
+          "inner_holdouts": 4,
+          "selection_reason": "Keep last-year baseline: no challenger has lower earlier inner-holdout MAE.",
+          "uncertainty_low": 32073.0,
+          "uncertainty_high": 247845.0,
+          "envelope_hit": true
+        },
+        {
+          "year": 2024,
+          "actual": 258620.0,
+          "forecast": 220810.0,
+          "method": "last_year",
+          "error": -37810.0,
+          "absolute_error": 37810.0,
+          "absolute_percentage_error": 14.61990565308174,
+          "train_last_year": 2023,
+          "train_years": 8,
+          "naive_forecast": 220810.0,
+          "naive_error": -37810.0,
+          "inner_holdouts": 5,
+          "selection_reason": "Keep last-year baseline: best average challenger did not beat it in both latest inner holdouts.",
+          "uncertainty_low": 112924.0,
+          "uncertainty_high": 328696.0,
+          "envelope_hit": true
+        },
+        {
+          "year": 2025,
+          "actual": 247405.0,
+          "forecast": 258620.0,
+          "method": "last_year",
+          "error": 11215.0,
+          "absolute_error": 11215.0,
+          "absolute_percentage_error": 4.533053091085467,
+          "train_last_year": 2024,
+          "train_years": 9,
+          "naive_forecast": 258620.0,
+          "naive_error": 11215.0,
+          "inner_holdouts": 6,
+          "selection_reason": "Keep last-year baseline: best average challenger did not beat it in both latest inner holdouts.",
+          "uncertainty_low": 150734.0,
+          "uncertainty_high": 366506.0,
+          "envelope_hit": true
+        }
+      ]
+    },
+    {
+      "port": "Conley",
+      "metric": "boxes",
+      "unit": "boxes",
+      "years": 10,
+      "history": [
+        {
+          "year": 2016,
+          "value": 140967
+        },
+        {
+          "year": 2017,
+          "value": 145540
+        },
+        {
+          "year": 2018,
+          "value": 161130
+        },
+        {
+          "year": 2019,
+          "value": 174849
+        },
+        {
+          "year": 2020,
+          "value": 161171
+        },
+        {
+          "year": 2021,
+          "value": 140750
+        },
+        {
+          "year": 2022,
+          "value": 79095
+        },
+        {
+          "year": 2023,
+          "value": 123460
+        },
+        {
+          "year": 2024,
+          "value": 145117
+        },
+        {
+          "year": 2025,
+          "value": 137632
+        }
+      ],
+      "history_end_year": 2025,
+      "forecast_year": 2026,
+      "forecast_horizon_years": 1,
+      "policy_method": "guarded_baseline_selection",
+      "evaluation_note": "Retrospective nested rolling-origin replay: every target was hidden from its fit and method selection. This development rerun is not independent prospective validation.",
+      "error_sign_note": "Error = forecast minus actual; positive mean error indicates overprediction.",
+      "metric_note": "MAE/RMSE are in the series unit. WAPE is total absolute error divided by total heldout actual volume; it is unavailable if every heldout actual is zero and is not an accuracy probability.",
+      "baseline_comparison_note": "Fixed methods and guarded policy are scored on identical outer fiscal years. Retrospective benchmark rankings do not select the production method.",
+      "method_notes": {
+        "last_year": "Last observed annual value (naive benchmark).",
+        "mean3": "Mean of the last three annual observations.",
+        "damped_trend": "Custom conservative trend: last value plus half the ordinary-least-squares slope over at most five annual observations; clipped at zero. This is not fitted Holt damped exponential smoothing."
+      },
+      "forecast": 137632.0,
+      "method": "last_year",
+      "status": "exploratory_not_validated",
+      "holdouts": 6,
+      "mae": 28210.166666666668,
+      "rmse": 33908.573274321054,
+      "mean_error": 6202.833333333333,
+      "wape_percent": 21.500968592206803,
+      "tested_first_year": 2020,
+      "tested_last_year": 2025,
+      "baseline_wape_percent": 21.500968592206803,
+      "baseline_mae": 28210.166666666668,
+      "baseline_skill_percent": 0.0,
+      "selection_details": {
+        "selected_method": "last_year",
+        "inner_holdouts": 7,
+        "candidate_mae": {
+          "last_year": 26140.0,
+          "mean3": 26723.571428571424,
+          "damped_trend": 29070.171428571426
+        },
+        "recent_inner_wins": {
+          "mean3": false,
+          "damped_trend": false
+        },
+        "minimum_inner_holdouts": 3,
+        "minimum_relative_mae_improvement": 0.05,
+        "required_latest_inner_wins": 2,
+        "threshold_status": "heuristic_prototype_guards",
+        "reason": "Keep last-year baseline: no challenger has lower earlier inner-holdout MAE.",
+        "inner_test_years": [
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ]
+      },
+      "method_comparison": [
+        {
+          "method": "last_year",
+          "holdouts": 6,
+          "mae": 28210.166666666668,
+          "rmse": 33908.573274321054,
+          "mean_error": 6202.833333333333,
+          "wape_percent": 21.500968592206803,
+          "next_forecast": 137632.0,
+          "method_note": "Last observed annual value (naive benchmark).",
+          "comparison_note": "Fixed methods and guarded policy are scored on identical outer fiscal years. Retrospective benchmark rankings do not select the production method."
+        },
+        {
+          "method": "mean3",
+          "holdouts": 6,
+          "mae": 26904.72222222222,
+          "rmse": 37467.717474637546,
+          "mean_error": 9208.722222222224,
+          "wape_percent": 20.50599680311643,
+          "next_forecast": 135403.0,
+          "method_note": "Mean of the last three annual observations.",
+          "comparison_note": "Fixed methods and guarded policy are scored on identical outer fiscal years. Retrospective benchmark rankings do not select the production method."
+        },
+        {
+          "method": "damped_trend",
+          "holdouts": 6,
+          "mae": 32468.824999999997,
+          "rmse": 37907.00270787158,
+          "mean_error": 4077.774999999999,
+          "wape_percent": 24.746794118581093,
+          "next_forecast": 140621.3,
+          "method_note": "Custom conservative trend: last value plus half the ordinary-least-squares slope over at most five annual observations; clipped at zero. This is not fitted Holt damped exponential smoothing.",
+          "comparison_note": "Fixed methods and guarded policy are scored on identical outer fiscal years. Retrospective benchmark rankings do not select the production method."
+        }
+      ],
+      "envelope_evaluated_holdouts": 5,
+      "envelope_hits": 3,
+      "envelope_hit_rate_percent": 60.0,
+      "uncertainty_low": 75977.0,
+      "uncertainty_high": 199287.0,
+      "uncertainty_note": "Largest absolute guarded-policy outer-holdout error around the annual estimate; a historical error envelope, not a confidence interval. It measures past errors of the selection policy, not calibrated coverage for the latest method. Future error can exceed it. Earlier-holdout-only envelope hits are reported separately.",
+      "reasons": [
+        "Exploratory annual screening only; no operational calibration or vessel-level inference.",
+        "Three-inner-holdout, 5% MAE-margin and two-recent-win promotion controls are heuristic prototype choices.",
+        "Keep last-year baseline: no challenger has lower earlier inner-holdout MAE.",
+        "Historical nested-holdout WAPE exceeds the prototype 15% screen; this is not a published accuracy standard.",
+        "A recent annual change exceeded the prototype 25% screen.",
+        "The guarded policy matched the last-year benchmark on these heldout years."
+      ],
+      "backtests": [
+        {
+          "year": 2020,
+          "actual": 161171.0,
+          "forecast": 174849.0,
+          "method": "last_year",
+          "error": 13678.0,
+          "absolute_error": 13678.0,
+          "absolute_percentage_error": 8.48663841509949,
+          "train_last_year": 2019,
+          "train_years": 4,
+          "naive_forecast": 174849.0,
+          "naive_error": 13678.0,
+          "inner_holdouts": 1,
+          "selection_reason": "Keep last-year baseline: only 1 inner holdout(s); at least 3 required to promote a challenger.",
+          "uncertainty_low": null,
+          "uncertainty_high": null,
+          "envelope_hit": null
+        },
+        {
+          "year": 2021,
+          "actual": 140750.0,
+          "forecast": 161171.0,
+          "method": "last_year",
+          "error": 20421.0,
+          "absolute_error": 20421.0,
+          "absolute_percentage_error": 14.508703374777975,
+          "train_last_year": 2020,
+          "train_years": 5,
+          "naive_forecast": 161171.0,
+          "naive_error": 20421.0,
+          "inner_holdouts": 2,
+          "selection_reason": "Keep last-year baseline: only 2 inner holdout(s); at least 3 required to promote a challenger.",
+          "uncertainty_low": 147493.0,
+          "uncertainty_high": 174849.0,
+          "envelope_hit": false
+        },
+        {
+          "year": 2022,
+          "actual": 79095.0,
+          "forecast": 140750.0,
+          "method": "last_year",
+          "error": 61655.0,
+          "absolute_error": 61655.0,
+          "absolute_percentage_error": 77.95056577533346,
+          "train_last_year": 2021,
+          "train_years": 6,
+          "naive_forecast": 140750.0,
+          "naive_error": 61655.0,
+          "inner_holdouts": 3,
+          "selection_reason": "Keep last-year baseline: no challenger has lower earlier inner-holdout MAE.",
+          "uncertainty_low": 120329.0,
+          "uncertainty_high": 161171.0,
+          "envelope_hit": false
+        },
+        {
+          "year": 2023,
+          "actual": 123460.0,
+          "forecast": 79095.0,
+          "method": "last_year",
+          "error": -44365.0,
+          "absolute_error": 44365.0,
+          "absolute_percentage_error": 35.934715697391866,
+          "train_last_year": 2022,
+          "train_years": 7,
+          "naive_forecast": 79095.0,
+          "naive_error": -44365.0,
+          "inner_holdouts": 4,
+          "selection_reason": "Keep last-year baseline: no challenger has lower earlier inner-holdout MAE.",
+          "uncertainty_low": 17440.0,
+          "uncertainty_high": 140750.0,
+          "envelope_hit": true
+        },
+        {
+          "year": 2024,
+          "actual": 145117.0,
+          "forecast": 123460.0,
+          "method": "last_year",
+          "error": -21657.0,
+          "absolute_error": 21657.0,
+          "absolute_percentage_error": 14.923820089996347,
+          "train_last_year": 2023,
+          "train_years": 8,
+          "naive_forecast": 123460.0,
+          "naive_error": -21657.0,
+          "inner_holdouts": 5,
+          "selection_reason": "Keep last-year baseline: best average challenger did not beat it in both latest inner holdouts.",
+          "uncertainty_low": 61805.0,
+          "uncertainty_high": 185115.0,
+          "envelope_hit": true
+        },
+        {
+          "year": 2025,
+          "actual": 137632.0,
+          "forecast": 145117.0,
+          "method": "last_year",
+          "error": 7485.0,
+          "absolute_error": 7485.0,
+          "absolute_percentage_error": 5.438415484770983,
+          "train_last_year": 2024,
+          "train_years": 9,
+          "naive_forecast": 145117.0,
+          "naive_error": 7485.0,
+          "inner_holdouts": 6,
+          "selection_reason": "Keep last-year baseline: best average challenger did not beat it in both latest inner holdouts.",
+          "uncertainty_low": 83462.0,
+          "uncertainty_high": 206772.0,
+          "envelope_hit": true
+        }
+      ]
+    },
+    {
+      "port": "Guam",
+      "metric": "boxes",
+      "unit": "boxes",
+      "years": 6,
+      "history": [
+        {
+          "year": 2020,
+          "value": 85143
+        },
+        {
+          "year": 2021,
+          "value": 86794
+        },
+        {
+          "year": 2022,
+          "value": 89052
+        },
+        {
+          "year": 2023,
+          "value": 85627
+        },
+        {
+          "year": 2024,
+          "value": 85258
+        },
+        {
+          "year": 2025,
+          "value": 83574
+        }
+      ],
+      "history_end_year": 2025,
+      "forecast_year": 2026,
+      "forecast_horizon_years": 1,
+      "policy_method": "guarded_baseline_selection",
+      "evaluation_note": "Retrospective nested rolling-origin replay: every target was hidden from its fit and method selection. This development rerun is not independent prospective validation.",
+      "error_sign_note": "Error = forecast minus actual; positive mean error indicates overprediction.",
+      "metric_note": "MAE/RMSE are in the series unit. WAPE is total absolute error divided by total heldout actual volume; it is unavailable if every heldout actual is zero and is not an accuracy probability.",
+      "baseline_comparison_note": "Fixed methods and guarded policy are scored on identical outer fiscal years. Retrospective benchmark rankings do not select the production method.",
+      "method_notes": {
+        "last_year": "Last observed annual value (naive benchmark).",
+        "mean3": "Mean of the last three annual observations.",
+        "damped_trend": "Custom conservative trend: last value plus half the ordinary-least-squares slope over at most five annual observations; clipped at zero. This is not fitted Holt damped exponential smoothing."
+      },
+      "forecast": 83574.0,
+      "method": "last_year",
+      "status": "exploratory_not_validated",
+      "holdouts": 2,
+      "mae": 1026.5,
+      "rmse": 1219.0194830272403,
+      "mean_error": 1026.5,
+      "wape_percent": 1.216001705837756,
+      "tested_first_year": 2024,
+      "tested_last_year": 2025,
+      "baseline_wape_percent": 1.216001705837756,
+      "baseline_mae": 1026.5,
+      "baseline_skill_percent": 0.0,
+      "selection_details": {
+        "selected_method": "last_year",
+        "inner_holdouts": 3,
+        "candidate_mae": {
+          "last_year": 1826.0,
+          "mean3": 2113.555555555557,
+          "damped_trend": 2197.966666666665
+        },
+        "recent_inner_wins": {
+          "mean3": false,
+          "damped_trend": false
+        },
+        "minimum_inner_holdouts": 3,
+        "minimum_relative_mae_improvement": 0.05,
+        "required_latest_inner_wins": 2,
+        "threshold_status": "heuristic_prototype_guards",
+        "reason": "Keep last-year baseline: no challenger has lower earlier inner-holdout MAE.",
+        "inner_test_years": [
+          2023,
+          2024,
+          2025
+        ]
+      },
+      "method_comparison": [
+        {
+          "method": "last_year",
+          "holdouts": 2,
+          "mae": 1026.5,
+          "rmse": 1219.0194830272403,
+          "mean_error": 1026.5,
+          "wape_percent": 1.216001705837756,
+          "next_forecast": 83574.0,
+          "method_note": "Last observed annual value (naive benchmark).",
+          "comparison_note": "Fixed methods and guarded policy are scored on identical outer fiscal years. Retrospective benchmark rankings do not select the production method."
+        },
+        {
+          "method": "mean3",
+          "holdouts": 2,
+          "mae": 2485.6666666666715,
+          "rmse": 2553.8078975870135,
+          "mean_error": 2485.6666666666715,
+          "wape_percent": 2.9445444781400107,
+          "next_forecast": 84819.66666666667,
+          "method_note": "Mean of the last three annual observations.",
+          "comparison_note": "Fixed methods and guarded policy are scored on identical outer fiscal years. Retrospective benchmark rankings do not select the production method."
+        },
+        {
+          "method": "damped_trend",
+          "holdouts": 2,
+          "mae": 1095.824999999997,
+          "rmse": 1222.2377781143857,
+          "mean_error": 1095.824999999997,
+          "wape_percent": 1.298124763078086,
+          "next_forecast": 83062.3,
+          "method_note": "Custom conservative trend: last value plus half the ordinary-least-squares slope over at most five annual observations; clipped at zero. This is not fitted Holt damped exponential smoothing.",
+          "comparison_note": "Fixed methods and guarded policy are scored on identical outer fiscal years. Retrospective benchmark rankings do not select the production method."
+        }
+      ],
+      "envelope_evaluated_holdouts": 1,
+      "envelope_hits": 0,
+      "envelope_hit_rate_percent": 0.0,
+      "uncertainty_low": 81890.0,
+      "uncertainty_high": 85258.0,
+      "uncertainty_note": "Largest absolute guarded-policy outer-holdout error around the annual estimate; a historical error envelope, not a confidence interval. It measures past errors of the selection policy, not calibrated coverage for the latest method. Future error can exceed it. Earlier-holdout-only envelope hits are reported separately.",
+      "reasons": [
+        "Exploratory annual screening only; no operational calibration or vessel-level inference.",
+        "Three-inner-holdout, 5% MAE-margin and two-recent-win promotion controls are heuristic prototype choices.",
+        "Keep last-year baseline: no challenger has lower earlier inner-holdout MAE.",
+        "Fewer than eight observed annual periods.",
+        "Fewer than five untouched one-year holdouts.",
+        "The guarded policy matched the last-year benchmark on these heldout years."
+      ],
+      "backtests": [
+        {
+          "year": 2024,
+          "actual": 85258.0,
+          "forecast": 85627.0,
+          "method": "last_year",
+          "error": 369.0,
+          "absolute_error": 369.0,
+          "absolute_percentage_error": 0.432803959745713,
+          "train_last_year": 2023,
+          "train_years": 4,
+          "naive_forecast": 85627.0,
+          "naive_error": 369.0,
+          "inner_holdouts": 1,
+          "selection_reason": "Keep last-year baseline: only 1 inner holdout(s); at least 3 required to promote a challenger.",
+          "uncertainty_low": null,
+          "uncertainty_high": null,
+          "envelope_hit": null
+        },
+        {
+          "year": 2025,
+          "actual": 83574.0,
+          "forecast": 85258.0,
+          "method": "last_year",
+          "error": 1684.0,
+          "absolute_error": 1684.0,
+          "absolute_percentage_error": 2.0149807356354845,
+          "train_last_year": 2024,
+          "train_years": 5,
+          "naive_forecast": 85258.0,
+          "naive_error": 1684.0,
+          "inner_holdouts": 2,
+          "selection_reason": "Keep last-year baseline: only 2 inner holdout(s); at least 3 required to promote a challenger.",
+          "uncertainty_low": 84889.0,
+          "uncertainty_high": 85627.0,
+          "envelope_hit": false
+        }
+      ]
+    }
+  ]
+}
