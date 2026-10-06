@@ -1,0 +1,111 @@
+[
+  {
+    "name": "Panda3D",
+    "version": "1.10.16",
+    "license": "Modified BSD License",
+    "files": [
+      "Panda3D-LICENSE.txt"
+    ],
+    "source_links": [
+      "Download, https://www.panda3d.org/download/",
+      "Source, https://github.com/panda3d/panda3d",
+      "Tracker, https://github.com/panda3d/panda3d/issues",
+      "Documentation, https://www.panda3d.org/manual/",
+      "Funding, https://opencollective.com/panda3d"
+    ]
+  },
+  {
+    "name": "simpy",
+    "version": "4.1.2",
+    "license": "MIT",
+    "files": [
+      "simpy-LICENSE.rst"
+    ],
+    "source_links": [
+      "Homepage, https://simpy.readthedocs.io",
+      "Documentation, https://simpy.readthedocs.io",
+      "Source code, https://gitlab.com/team-simpy/simpy/"
+    ]
+  },
+  {
+    "name": "openpyxl",
+    "version": "3.1.5",
+    "license": "MIT",
+    "files": [
+      "openpyxl-LICENCE.rst"
+    ],
+    "source_links": [
+      "Documentation, https://openpyxl.readthedocs.io/en/stable/",
+      "Source, https://foss.heptapod.net/openpyxl/openpyxl",
+      "Tracker, https://foss.heptapod.net/openpyxl/openpyxl/-/issues"
+    ]
+  },
+  {
+    "name": "et_xmlfile",
+    "version": "2.0.0",
+    "license": "MIT",
+    "files": [
+      "et_xmlfile-AUTHORS.txt",
+      "et_xmlfile-LICENCE.python",
+      "et_xmlfile-LICENCE.rst"
+    ],
+    "source_links": [
+      "Documentation, https://openpyxl.pages.heptapod.net/et_xmlfile/",
+      "Source, https://foss.heptapod.net/openpyxl/et_xmlfile",
+      "Tracker, https://foss.heptapod.net/openpyxl/et_xmfile/-/issues"
+    ]
+  },
+  {
+    "name": "psutil",
+    "version": "7.2.2",
+    "license": "BSD-3-Clause",
+    "files": [
+      "psutil-LICENSE"
+    ],
+    "source_links": null
+  },
+  {
+    "name": "pyinstaller",
+    "version": "6.22.3",
+    "license": "GPLv2-or-later with a special exception which allows to use PyInstaller to build and distribute non-free programs (including commercial ones)",
+    "files": [
+      "pyinstaller-COPYING.txt"
+    ],
+    "source_links": [
+      "Homepage, https://pyinstaller.org",
+      "Documentation, https://pyinstaller.org",
+      "Source Code, https://github.com/pyinstaller/pyinstaller",
+      "Release Notes, https://pyinstaller.org/en/stable/CHANGES.html"
+    ]
+  },
+  {
+    "name": "PySide6",
+    "version": "6.11.2",
+    "license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+    "files": [
+      "PySide6-LicenseRef-Qt-Commercial.txt"
+    ],
+    "source_links": [
+      "Homepage, https://pyside.org",
+      "Documentation, https://doc.qt.io/qtforpython",
+      "Repository, https://code.qt.io/cgit/pyside/pyside-setup.git/",
+      "Changelog, https://code.qt.io/cgit/pyside/pyside-setup.git/tree/doc/changelogs",
+      "Tracker, https://qt-project.atlassian.net/browse/PYSIDE"
+    ]
+  },
+  {
+    "name": "shiboken6",
+    "version": "6.11.2",
+    "license": "LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only",
+    "files": [
+      "shiboken6-LicenseRef-Qt-Commercial.txt"
+    ],
+    "source_links": [
+      "Homepage, https://pyside.org",
+      "Documentation, https://doc.qt.io/qtforpython",
+      "Repository, https://code.qt.io/cgit/pyside/pyside-setup.git/",
+      "Changelog, https://code.qt.io/cgit/pyside/pyside-setup.git/tree/doc/changelogs",
+      "Tracker, https://qt-project.atlassian.net/browse/PYSIDE"
+    ]
+  }
+]

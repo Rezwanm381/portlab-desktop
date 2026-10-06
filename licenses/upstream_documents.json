@@ -1,0 +1,46 @@
+[
+  {
+    "file": "LGPL-3.0.txt",
+    "source": "https://raw.githubusercontent.com/qt/qtbase/dev/LICENSES/LGPL-3.0-only.txt"
+  },
+  {
+    "file": "GPL-3.0.txt",
+    "source": "https://raw.githubusercontent.com/qt/qtbase/dev/LICENSES/GPL-3.0-only.txt"
+  },
+  {
+    "file": "NVIDIA-Cg-license.pdf",
+    "source": "https://developer.download.nvidia.com/cg/Cg_2.2/license.pdf"
+  },
+  {
+    "file": "FreeType-FTL.txt",
+    "source": "https://raw.githubusercontent.com/freetype/freetype/master/docs/FTL.TXT"
+  },
+  {
+    "file": "zlib-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/madler/zlib/master/LICENSE"
+  },
+  {
+    "file": "libpng-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/pnggroup/libpng/master/LICENSE"
+  },
+  {
+    "file": "OpenSSL-1.0-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/openssl/openssl/OpenSSL_1_0_2-stable/LICENSE"
+  },
+  {
+    "file": "HarfBuzz-COPYING.txt",
+    "source": "https://raw.githubusercontent.com/harfbuzz/harfbuzz/main/COPYING"
+  },
+  {
+    "file": "libjpeg-turbo-LICENSE.md",
+    "source": "https://raw.githubusercontent.com/libjpeg-turbo/libjpeg-turbo/main/LICENSE.md"
+  },
+  {
+    "file": "Qt-upstream-third-party-notices.html",
+    "source": "https://doc.qt.io/qt-6/licenses-used-in-qt.html"
+  },
+  {
+    "file": "Panda3D-upstream-third-party-notices.html",
+    "source": "https://docs.panda3d.org/1.10/python/distribution/thirdparty-licenses"
+  }
+]
