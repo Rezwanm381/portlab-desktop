@@ -1,0 +1,66 @@
+name: Build Windows artifact
+
+# A maintainer explicitly starts this build. It never creates a GitHub release,
+# uploads release assets, or claims that a hosted runner validates GPU replay.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUNBUFFERED: "1"
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          architecture: x64
+          cache: pip
+          cache-dependency-path: requirements.lock.txt
+      - name: Install tested Windows build dependencies
+        run: python -m pip install --disable-pip-version-check -r requirements.lock.txt
+      - name: Run headless tests
+        env:
+          QT_QPA_PLATFORM: offscreen
+        run: python -m unittest discover -s tests -v
+      - name: Reproduce curated public evidence
+        run: |
+          python docs/model_review/reproduce_forecast_audit.py --output verification/ci_forecast
+          python examples/synthetic_import_test/check_example.py
+      - name: Build folder application
+        run: python tools/build_release.py
+      - name: Verify frozen Python modules match current source
+        run: python tools/check_frozen_sources.py
+      - name: Package reproducible source and synthetic examples
+        run: python tools/package_delivery.py --source-only
+      - name: Mark hosted build scope
+        shell: pwsh
+        run: |
+          $portlabVersion = python -c "from portlab import __version__; print(__version__)"
+          @"
+          This artifact was compiled on a hosted Windows runner and passed the
+          headless tests and frozen-source comparison. GPU replay and the full
+          native desktop workflow have not been tested on this runner.
+          Before distributing a tested desktop release, run the packaged smoke
+          check on a Windows computer with an OpenGL-capable display, then run
+          python tools/package_delivery.py from the same checkout.
+          "@ | Set-Content -Encoding utf8 "dist/v$portlabVersion/PortLab/CI_BUILD_SCOPE.txt"
+      - name: Upload build artifacts for maintainer review
+        uses: actions/upload-artifact@v6
+        with:
+          name: PortLab-Windows-${{ github.sha }}
+          path: |
+            dist/**/PortLab/**
+            delivery/PortLab_Source_*.zip
+            delivery/PortLab_Synthetic_Test.zip
+            delivery/delivery_manifest_*.json
+            verification/frozen_source_check_*.json
+          if-no-files-found: error
+          retention-days: 14
