@@ -1,0 +1,66 @@
+[
+  {
+    "source_id": "C01",
+    "organization": "Massachusetts Port Authority",
+    "document": "FY2025 Annual Comprehensive Financial Report",
+    "location / unit definition": "S-15 p.166-167; financial pp.30,36",
+    "url": "https://www.massport.com/sites/default/files/2025-12/Massport-2025-ACFR-Final-Report.pdf",
+    "source note": "One published 2016-2025 series; older FY18 and FY20 totals differ; cause unresolved."
+  },
+  {
+    "source_id": "C02",
+    "organization": "Massachusetts Port Authority",
+    "document": "Conley Terminal About the Port",
+    "location / unit definition": "Terminal Modernization Project",
+    "url": "https://www.massport.com/conley-terminal/about-the-port",
+    "source note": "50-ft berths; 2021 cranes; published serviced vessel class 15,000 TEU."
+  },
+  {
+    "source_id": "G02",
+    "organization": "Guam Economic Development Authority",
+    "document": "Economic Indicators",
+    "location / unit definition": "Seaport table FY2020-2024",
+    "url": "https://www.investguam.com/economic-indicators/",
+    "source note": "Exact box counts and all-vessel calls; table attributes figures to Guam Port cargo statistics."
+  },
+  {
+    "source_id": "G03",
+    "organization": "Port Authority of Guam",
+    "document": "Board materials, Nov 2025",
+    "location / unit definition": "GM FY2025 ended Sep 30, p.9",
+    "url": "https://portofguam.com/sites/default/files/112125_pag_board_meeting_materials.pdf",
+    "source note": "FY2025 83,574 boxes; published board report, not audited vessel-level records."
+  },
+  {
+    "source_id": "G04",
+    "organization": "Office of Public Accountability, Guam",
+    "document": "Port Authority FY2025 financial audit highlights",
+    "location / unit definition": "FY2024/FY2025 operating totals, pp.1-3",
+    "url": "https://opaguam.org/file/14076/download?token=gi35SmuE",
+    "source note": "Exact operating totals, $ rounded project references, 3 aging crane replacement scope."
+  },
+  {
+    "source_id": "G05",
+    "organization": "Port Authority of Guam",
+    "document": "Board materials, May 2026",
+    "location / unit definition": "Award update, GM report p.20",
+    "url": "https://portofguam.com/sites/default/files/052826_pag_board_meeting_materials.pdf",
+    "source note": "Award $59,669,434, local share $14,917,358, total $74,586,792."
+  },
+  {
+    "source_id": "G06",
+    "organization": "Port Authority of Guam",
+    "document": "FY2024 Annual Report",
+    "location / unit definition": "Operational Excellence p.6; agent summary",
+    "url": "https://portofguam.com/sites/default/files/fy2024_annual_report.pdf",
+    "source note": "Two-year grouped averages; never interpret as separate annual measurements."
+  },
+  {
+    "source_id": "M01",
+    "organization": "Project-provided scenario inputs",
+    "document": "Illustrative vessel-arrival schedule",
+    "location / unit definition": "Synthetic operating scenario; excluded from reported annual forecasting history",
+    "url": null,
+    "source note": "Illustrative 200-vessel baseline supplied during development; not a Guam/Conley observed dataset. Private development material is excluded from this repository."
+  }
+]
