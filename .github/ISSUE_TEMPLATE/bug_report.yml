@@ -1,0 +1,30 @@
+name: Bug report
+description: Report an import, calculation, desktop, or replay problem.
+title: "[Bug] "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version and installation
+      placeholder: "0.2.0 Windows ZIP, or source checkout and Python version"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps and expected result
+      description: Include the terminal, changed settings, and the result you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Paste the error text or attach a screenshot. Use synthetic or publicly shareable inputs for a reproducer.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Computer and diagnostics
+      description: Windows version, RAM, GPU, and relevant exported model/desktop diagnostics.

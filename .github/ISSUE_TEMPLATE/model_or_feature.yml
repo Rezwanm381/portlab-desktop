@@ -1,0 +1,20 @@
+name: Model or feature proposal
+description: Suggest a workflow, visualization, data, or model improvement.
+title: "[Proposal] "
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Problem and proposed behavior
+      description: Explain the user task and how the proposed change would help.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and verification
+      description: For model changes, include units, assumptions, a public reference or analytical example, and how the change could be checked.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Examples or alternatives
