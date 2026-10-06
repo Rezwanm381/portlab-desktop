@@ -1,0 +1,126 @@
+{
+  "app_version": "0.2.0",
+  "review_date": "2026-10-04",
+  "verified_at_utc": "2026-10-06T00:37:32+00:00",
+  "csv_and_xlsx_equivalent": true,
+  "matching_settings_valid": true,
+  "all_calls_synthetic": true,
+  "annual_forecasting_targets_used": 0,
+  "calls": 32,
+  "horizon_hours": 336,
+  "last_arrival_hour": 194.38,
+  "import_boxes": 13802,
+  "export_boxes": 7845,
+  "seed": 20261004,
+  "served_calls": 11,
+  "end_backlog_calls": 21,
+  "service_backlog_boxes": 13847,
+  "restricted_mean_wait_hours": 171.7772099496216,
+  "completed_mean_wait_hours": 129.4323629529147,
+  "wait_population_calls": 32,
+  "completed_wait_calls": 13,
+  "gate_status": "eligible",
+  "first_eligible_hour": 168,
+  "physical_checks_passed": true,
+  "required_physical_checks": [
+    "import_conserved",
+    "export_conserved",
+    "future_export_conserved",
+    "initial_inventory_conserved",
+    "yard_inventory_consistent",
+    "yard_capacity_respected",
+    "yard_slot_balance",
+    "apron_slot_balance",
+    "apron_capacity_respected",
+    "resource_bounds_respected",
+    "inventory_nonnegative"
+  ],
+  "operational_prediction_status": "not_validated",
+  "comparison_status": "evaluated",
+  "comparison_candidates": 5,
+  "preferred_conditional_candidate": "Reassign existing cranes",
+  "candidate_summary": [
+    {
+      "name": "Earlier import release",
+      "category": "operational",
+      "changes": {
+        "import_dwell_hours": 27.0
+      },
+      "mean_wait_reduction_hours": 0.0,
+      "lower_bound_hours": 0.0,
+      "served_delta": 0.0,
+      "backlog_delta": 0.0,
+      "service_backlog_boxes_delta": 0.0,
+      "accepted": false,
+      "reason": "No positive conservative paired wait-reduction lower bound."
+    },
+    {
+      "name": "Faster tractor dispatch",
+      "category": "operational",
+      "changes": {
+        "tractor_cycle_minutes": 6.0
+      },
+      "mean_wait_reduction_hours": 0.30059095828547794,
+      "lower_bound_hours": 0.23823320869287645,
+      "served_delta": 0.0,
+      "backlog_delta": 0.0,
+      "service_backlog_boxes_delta": -52.0,
+      "accepted": true,
+      "reason": "Positive family-adjusted paired wait-reduction lower bound with no worsening call/cargo constraints; conditional scenario only."
+    },
+    {
+      "name": "Reassign existing cranes",
+      "category": "operational",
+      "changes": {
+        "cranes_per_vessel": 2
+      },
+      "mean_wait_reduction_hours": 40.98178535965988,
+      "lower_bound_hours": 40.53831170516715,
+      "served_delta": 7.0,
+      "backlog_delta": -7.0,
+      "service_backlog_boxes_delta": -5305.333333333333,
+      "accepted": true,
+      "reason": "Positive family-adjusted paired wait-reduction lower bound with no worsening call/cargo constraints; conditional scenario only."
+    },
+    {
+      "name": "One additional crane",
+      "category": "capacity",
+      "changes": {
+        "cranes": 4
+      },
+      "mean_wait_reduction_hours": 0.0,
+      "lower_bound_hours": 0.0,
+      "served_delta": 0.0,
+      "backlog_delta": 0.0,
+      "service_backlog_boxes_delta": 0.0,
+      "accepted": false,
+      "reason": "No positive conservative paired wait-reduction lower bound."
+    },
+    {
+      "name": "One additional compatible berth",
+      "category": "capacity",
+      "changes": {
+        "berths": 3
+      },
+      "mean_wait_reduction_hours": 15.39454376623994,
+      "lower_bound_hours": 15.03346838956404,
+      "served_delta": 1.0,
+      "backlog_delta": -1.0,
+      "service_backlog_boxes_delta": -1361.0,
+      "accepted": true,
+      "reason": "Positive family-adjusted paired wait-reduction lower bound with no worsening call/cargo constraints; conditional scenario only."
+    }
+  ],
+  "input_sha256": {
+    "guam_synthetic_test.csv": "6bdbf5c5449e1bf2697766fc569293ca2b851b0f77f0e49f04663cf264a9a007",
+    "guam_synthetic_test.xlsx": "38bc9849528152a6de295833630de02eeb028e395eac5d95cff7cede4e6a1780",
+    "guam_synthetic_test.settings.json": "f118032510f97ccf9c4013a3b8d6cb37ce9f9b4567207eda227acaae30f65f95"
+  },
+  "model_source_sha256": {
+    "portlab/contracts.py": "bd3911c293d9f74c2ccb564eeb155588a5f7e75487af6f1720987bb58032bea1",
+    "portlab/data.py": "5606d95f5d8c1784cbd94e7a1774bd971cc9e860be07304baa64e2fe1695ecc4",
+    "portlab/engine.py": "f3eecdb5a079d907d24e0aa4adf8b705d7898f8966ec8388b7b26a267ab6c6bf"
+  },
+  "reproduction_scope": "Dataset loaders, matching settings contract, engine baseline and paired comparisons. Qt automatic settings behavior is checked separately by tools/desktop_check.py and tools/phase2_check.py.",
+  "disclaimer": "Fixed-seed fictional operating scenario, not actual port measurements, independent prediction validation, causal investment benefit or annual forecasting evidence."
+}

@@ -1,0 +1,17 @@
+SYNTHETIC PORTLAB IMPORT TEST
+
+1. Open PortLab and click Import data.
+2. Select guam_synthetic_test.csv OR guam_synthetic_test.xlsx (not both).
+3. Keep guam_synthetic_test.settings.json beside the data file; the app loads it automatically.
+4. Confirm Guam and 32 synthetic calls, then click Run simulation.
+5. Use Play in Simulation & replay, then Compare actions and Export reports.
+
+This is a 336-hour fictional scenario. Arrival times are hours from scenario start, volumes are physical boxes, dimensions are metres, and box40_share is a fraction from 0 to 1. Some calls share arrival times; two have zero imports and two have zero exports. All ships fit the illustrative port limits. Values do not represent actual Guam demand or performance.
+
+The import replaces the vessel schedule. Existing annual histories remain available in Forecasts; this synthetic operating file is not annual forecasting evidence.
+
+The v0.2.0 fixed-seed baseline departs 11 calls and retains 21 unfinished calls at 336 hours. All 11 required physical checks pass. Operational timing prediction remains not_validated because no measured berth/departure times are supplied. See README.md and IMPORT_CHECK_RESULTS.json for results and interpretation.
+
+To reproduce the source calculation, install the repository dependencies and run:
+python examples/synthetic_import_test/check_example.py
+This validates the equivalent inputs and settings, then recalculates the baseline and paired comparisons. It uses only repository files and does not require private development material.
