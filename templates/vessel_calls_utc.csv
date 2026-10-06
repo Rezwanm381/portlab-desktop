@@ -1,0 +1,2 @@
+port,vessel_id,arrival_utc,berth_start_utc,departure_utc,import_boxes,export_boxes,length_m,draft_m,box40_share,evidence_type,evidence_reference,note
+Guam,EXAMPLE-CALL-001,2026-10-01T08:00:00Z,,,300,150,180,8,0.5,synthetic,TEMPLATE-EXAMPLE,Use ISO UTC timestamps. This row is illustrative and not an observation.

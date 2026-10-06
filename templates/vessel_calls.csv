@@ -1,0 +1,2 @@
+port,vessel_id,arrival_hour,import_boxes,export_boxes,length_m,draft_m,box40_share,evidence_type,evidence_reference,note
+Guam,EXAMPLE-CALL-001,0,300,150,180,8,0.5,synthetic,TEMPLATE-EXAMPLE,Replace this row with your schedule. Share and dimensions are illustrative.

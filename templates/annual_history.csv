@@ -1,0 +1,2 @@
+port,fiscal_year,period_start,period_end,metric,value,unit,record_status,source_id,note
+Guam,2025,2024-10-01,2025-09-30,boxes,83574,boxes,reported_unaudited,G03,FY2025 board-reported count. Template matches supplied workbook; do not upload it twice.
