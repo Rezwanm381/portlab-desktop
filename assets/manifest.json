@@ -1,0 +1,281 @@
+{
+  "source_archive": "Guam_Conley_3D_DAE_Asset_Pack_v1.zip",
+  "source_archive_sha256": "e190f57ed132a119319c06e07c9cefc7e6d4e46b843b83d1cfa5db9afa1bb72b",
+  "coordinate_system": "metres, Z up, +X vessel bow, +Y crane seaside",
+  "scenery": "Schematic only; these assets do not establish surveyed port geometry or operating capacity.",
+  "importer": "Local explicit geometry/material parser; no archived scripts executed.",
+  "models": [
+    {
+      "asset": "chassis40",
+      "parts": 20,
+      "triangles": 384,
+      "min_m": [
+        -6.349999904632568,
+        -1.1399999856948853,
+        0.030000030994415283
+      ],
+      "max_m": [
+        6.349999904632568,
+        1.1399999856948853,
+        1.7200000286102295
+      ],
+      "source_sha256": "b40b404408d50e516f8cbc3938d5acd993ffc42119c0e1c35f38aa6456e3c392",
+      "bam_bytes": 35534
+    },
+    {
+      "asset": "container20_dry",
+      "parts": 39,
+      "triangles": 468,
+      "min_m": [
+        -3.0289998054504395,
+        -1.218999981880188,
+        0.0
+      ],
+      "max_m": [
+        3.0289998054504395,
+        1.218999981880188,
+        2.5909998416900635
+      ],
+      "source_sha256": "ea187fdf4eec2cf9b86b9c9259f4ed974ad644fcf691c545ca4e5f2aabb972e3",
+      "bam_bytes": 43106
+    },
+    {
+      "asset": "container40_dry",
+      "parts": 69,
+      "triangles": 828,
+      "min_m": [
+        -6.0960001945495605,
+        -1.218999981880188,
+        0.0
+      ],
+      "max_m": [
+        6.0960001945495605,
+        1.218999981880188,
+        2.5909998416900635
+      ],
+      "source_sha256": "7243c11059996691e7bfeef3c2a1b13462d5fab2877739a56462b432167db473",
+      "bam_bytes": 75506
+    },
+    {
+      "asset": "container40_reefer",
+      "parts": 77,
+      "triangles": 924,
+      "min_m": [
+        -6.0960001945495605,
+        -1.218999981880188,
+        0.0
+      ],
+      "max_m": [
+        6.0960001945495605,
+        1.218999981880188,
+        2.5909998416900635
+      ],
+      "source_sha256": "fb800e509d1af5a89dc89524f79d84c046aed552ee9879a01491bc3d2a54e931",
+      "bam_bytes": 84152
+    },
+    {
+      "asset": "rtg_conley_body",
+      "parts": 24,
+      "triangles": 576,
+      "min_m": [
+        -6.699999809265137,
+        -12.425000190734863,
+        -0.009999990463256836
+      ],
+      "max_m": [
+        6.75,
+        12.425000190734863,
+        15.699999809265137
+      ],
+      "source_sha256": "ddf9ef0bb997938a43278808e357f2d7790e4d4538d2967dbeba6355cf7303e8",
+      "bam_bytes": 52826
+    },
+    {
+      "asset": "rtg_trolley",
+      "parts": 4,
+      "triangles": 120,
+      "min_m": [
+        -2.5999999046325684,
+        -1.5499999523162842,
+        -0.6399999856948853
+      ],
+      "max_m": [
+        2.5999999046325684,
+        1.5499999523162842,
+        1.0399999618530273
+      ],
+      "source_sha256": "f36dd205dbdedd31ea0d63ec8db4224d93bba2ef8c41ebfc947c50e7518f62df",
+      "bam_bytes": 11778
+    },
+    {
+      "asset": "spreader20",
+      "parts": 9,
+      "triangles": 108,
+      "min_m": [
+        -3.140000104904175,
+        -1.1700000762939453,
+        -0.4099999964237213
+      ],
+      "max_m": [
+        3.140000104904175,
+        1.1700000762939453,
+        0.7250000238418579
+      ],
+      "source_sha256": "0acedce8998527a355eb37ed4cccd71444850637dd436c6c9ab51b5707954dfd",
+      "bam_bytes": 10696
+    },
+    {
+      "asset": "spreader40",
+      "parts": 9,
+      "triangles": 108,
+      "min_m": [
+        -6.210000038146973,
+        -1.1700000762939453,
+        -0.4099999964237213
+      ],
+      "max_m": [
+        6.210000038146973,
+        1.1700000762939453,
+        0.7250000238418579
+      ],
+      "source_sha256": "c2a3543553b3aa48e3f6ffd9aa8039e5276e11cfc3ee70f12756cae5db7b9fae",
+      "bam_bytes": 10696
+    },
+    {
+      "asset": "sts_conley_berth10_body",
+      "parts": 47,
+      "triangles": 852,
+      "min_m": [
+        -9.0,
+        -27.104999542236328,
+        0.0
+      ],
+      "max_m": [
+        9.0,
+        56.0,
+        45.00499725341797
+      ],
+      "source_sha256": "6c6b48bdfd3fa7cc2c95160f912d474e1fd6fb6cace74c0c77add3e35043d52b",
+      "bam_bytes": 77682
+    },
+    {
+      "asset": "sts_conley_legacy_body",
+      "parts": 47,
+      "triangles": 852,
+      "min_m": [
+        -7.099999904632568,
+        -21.345001220703125,
+        0.0
+      ],
+      "max_m": [
+        7.099999904632568,
+        44.0,
+        36.80500030517578
+      ],
+      "source_sha256": "2679dffaf868ce6fb4b37bbac95d8fc46247e920ab88b17f030dba3b8666568a",
+      "bam_bytes": 77680
+    },
+    {
+      "asset": "sts_guam_body",
+      "parts": 47,
+      "triangles": 852,
+      "min_m": [
+        -7.099999904632568,
+        -17.505001068115234,
+        0.0
+      ],
+      "max_m": [
+        7.099999904632568,
+        36.0,
+        32.70499801635742
+      ],
+      "source_sha256": "6e8ab47d8fe401510555b87bba7a52fb8c8a5280996c8c21cc13b6643c5a7e87",
+      "bam_bytes": 77662
+    },
+    {
+      "asset": "sts_trolley",
+      "parts": 8,
+      "triangles": 240,
+      "min_m": [
+        -2.4000000953674316,
+        -1.75,
+        -0.8700000047683716
+      ],
+      "max_m": [
+        2.4000000953674316,
+        1.75,
+        1.0199999809265137
+      ],
+      "source_sha256": "c1b30d29bf77093682936401ac3a48030f32ac203e8d0ede0ab865783abdf4f0",
+      "bam_bytes": 22578
+    },
+    {
+      "asset": "terminal_tractor",
+      "parts": 11,
+      "triangles": 276,
+      "min_m": [
+        -2.5,
+        -1.3049999475479126,
+        0.009999990463256836
+      ],
+      "max_m": [
+        2.7300000190734863,
+        1.3049999475479126,
+        3.8899998664855957
+      ],
+      "source_sha256": "44fc9255e61162fb27cc602cf90217d79242efd454fb160cb824d8eca2d26921",
+      "bam_bytes": 25828
+    },
+    {
+      "asset": "top_lifter_guam_body",
+      "parts": 15,
+      "triangles": 324,
+      "min_m": [
+        -3.825000047683716,
+        -1.8299999237060547,
+        0.0
+      ],
+      "max_m": [
+        4.409999847412109,
+        1.774999976158142,
+        7.670000076293945
+      ],
+      "source_sha256": "f5755222e30c8665a070059bb378a2511a50f48cea239709c225500495413de0",
+      "bam_bytes": 30156
+    },
+    {
+      "asset": "vessel_feeder_empty",
+      "parts": 20,
+      "triangles": 240,
+      "min_m": [
+        -66.82499694824219,
+        -11.0,
+        0.0
+      ],
+      "max_m": [
+        67.29750061035156,
+        11.0,
+        18.450000762939453
+      ],
+      "source_sha256": "308c1091372f417c9d79b2ba74a541b3f60d1c618a12a55f994eac7f477b8b7c",
+      "bam_bytes": 22594
+    },
+    {
+      "asset": "vessel_large_empty",
+      "parts": 20,
+      "triangles": 240,
+      "min_m": [
+        -148.5,
+        -20.5,
+        0.0
+      ],
+      "max_m": [
+        149.5500030517578,
+        20.5,
+        18.450000762939453
+      ],
+      "source_sha256": "3562982f1eb27aa9e8b7c36af44f11737d7f0be907600b80bbdbfaf5fce2c75d",
+      "bam_bytes": 22592
+    }
+  ]
+}
