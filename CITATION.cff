@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If referencing this software demonstration, cite the repository and release version. Reported port data retain their separate source attribution."
+type: software
+title: "PortLab Desktop: Offline Port Forecasting, Simulation and 3D Replay"
+authors:
+  - family-names: "Rezwan"
+    given-names: "Mojib"
+version: 0.2.0
+date-released: 2026-10-04
+repository-code: "https://github.com/Rezwanm381/portlab-desktop"
+url: "https://github.com/Rezwanm381/portlab-desktop"
+abstract: >-
+  A Python desktop scenario laboratory for Guam and Conley port planning,
+  with exploratory annual forecasting, finite-resource discrete-event
+  simulation, conditional operating comparisons and recorded 3D replay.
+  Synthetic operational examples do not validate real port performance.
+keywords:
+  - discrete-event simulation
+  - port operations
+  - forecasting
+  - Python
+  - PySide6
+  - Panda3D

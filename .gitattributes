@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.csv -text whitespace=cr-at-eol
+*.dae -text
+*.settings.json -text
+*.bam binary
+*.xlsx binary
+*.png binary
+*.pdf binary
+licenses/** -whitespace
