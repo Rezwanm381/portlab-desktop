@@ -1,0 +1,961 @@
+<?xml version='1.0' encoding='utf-8'?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.0">
+  <asset>
+    <contributor>
+      <author>Port thesis asset generator</author>
+    </contributor>
+    <created>2026-10-03T21:10:53Z</created>
+    <modified>2026-10-03T21:10:53Z</modified>
+    <unit name="meter" meter="1" />
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="effect_reefer_rib">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <diffuse>
+              <color>0.72 0.78 0.79 1</color>
+            </diffuse>
+            <specular>
+              <color>0.10 0.10 0.10 1</color>
+            </specular>
+            <shininess>
+              <float>8</float>
+            </shininess>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="effect_reefer_unit">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <diffuse>
+              <color>0.21 0.41 0.46 1</color>
+            </diffuse>
+            <specular>
+              <color>0.10 0.10 0.10 1</color>
+            </specular>
+            <shininess>
+              <float>8</float>
+            </shininess>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="effect_reefer_white">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <diffuse>
+              <color>0.83 0.88 0.88 1</color>
+            </diffuse>
+            <specular>
+              <color>0.10 0.10 0.10 1</color>
+            </specular>
+            <shininess>
+              <float>8</float>
+            </shininess>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="effect_steel">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <diffuse>
+              <color>0.67 0.7 0.72 1</color>
+            </diffuse>
+            <specular>
+              <color>0.10 0.10 0.10 1</color>
+            </specular>
+            <shininess>
+              <float>8</float>
+            </shininess>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="effect_steel_dark">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <diffuse>
+              <color>0.29 0.35 0.39 1</color>
+            </diffuse>
+            <specular>
+              <color>0.10 0.10 0.10 1</color>
+            </specular>
+            <shininess>
+              <float>8</float>
+            </shininess>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="material_reefer_rib" name="reefer_rib">
+      <instance_effect url="#effect_reefer_rib" />
+    </material>
+    <material id="material_reefer_unit" name="reefer_unit">
+      <instance_effect url="#effect_reefer_unit" />
+    </material>
+    <material id="material_reefer_white" name="reefer_white">
+      <instance_effect url="#effect_reefer_white" />
+    </material>
+    <material id="material_steel" name="steel">
+      <instance_effect url="#effect_steel" />
+    </material>
+    <material id="material_steel_dark" name="steel_dark">
+      <instance_effect url="#effect_steel_dark" />
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geometry_box" name="unit_box">
+      <mesh>
+        <source id="box_positions">
+          <float_array id="box_positions_array" count="108">-0.5 -0.5 -0.5 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 0.5 -0.5 0.5 0.5 0.5 0.5 -0.5 -0.5 0.5 0.5 0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 -0.5 -0.5 0.5 0.5 -0.5 0.5 0.5 0.5 0.5 -0.5 -0.5 0.5 0.5 0.5 0.5 -0.5 0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5 0.5 -0.5 0.5 -0.5 -0.5 -0.5 0.5 -0.5 0.5 -0.5 -0.5 0.5 -0.5 0.5 -0.5 -0.5 0.5 0.5 0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5 -0.5</float_array>
+          <technique_common>
+            <accessor source="#box_positions_array" count="36" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="box_normals">
+          <float_array id="box_normals_array" count="108">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#box_normals_array" count="36" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="box_vertices">
+          <input semantic="POSITION" source="#box_positions" />
+        </vertices>
+        <triangles material="paint" count="12">
+          <input semantic="VERTEX" source="#box_vertices" offset="0" />
+          <input semantic="NORMAL" source="#box_normals" offset="1" />
+          <p>0 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 25 25 26 26 27 27 28 28 29 29 30 30 31 31 32 32 33 33 34 34 35 35</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geometry_cylinder" name="unit_cylinder">
+      <mesh>
+        <source id="cylinder_positions">
+          <float_array id="cylinder_positions_array" count="432">1 0 -0.5 0.8660254 0.5 -0.5 0.8660254 0.5 0.5 1 0 -0.5 0.8660254 0.5 0.5 1 0 0.5 0 0 -0.5 0.8660254 0.5 -0.5 1 0 -0.5 0 0 0.5 1 0 0.5 0.8660254 0.5 0.5 0.8660254 0.5 -0.5 0.5 0.8660254 -0.5 0.5 0.8660254 0.5 0.8660254 0.5 -0.5 0.5 0.8660254 0.5 0.8660254 0.5 0.5 0 0 -0.5 0.5 0.8660254 -0.5 0.8660254 0.5 -0.5 0 0 0.5 0.8660254 0.5 0.5 0.5 0.8660254 0.5 0.5 0.8660254 -0.5 6.123234e-17 1 -0.5 6.123234e-17 1 0.5 0.5 0.8660254 -0.5 6.123234e-17 1 0.5 0.5 0.8660254 0.5 0 0 -0.5 6.123234e-17 1 -0.5 0.5 0.8660254 -0.5 0 0 0.5 0.5 0.8660254 0.5 6.123234e-17 1 0.5 6.123234e-17 1 -0.5 -0.5 0.8660254 -0.5 -0.5 0.8660254 0.5 6.123234e-17 1 -0.5 -0.5 0.8660254 0.5 6.123234e-17 1 0.5 0 0 -0.5 -0.5 0.8660254 -0.5 6.123234e-17 1 -0.5 0 0 0.5 6.123234e-17 1 0.5 -0.5 0.8660254 0.5 -0.5 0.8660254 -0.5 -0.8660254 0.5 -0.5 -0.8660254 0.5 0.5 -0.5 0.8660254 -0.5 -0.8660254 0.5 0.5 -0.5 0.8660254 0.5 0 0 -0.5 -0.8660254 0.5 -0.5 -0.5 0.8660254 -0.5 0 0 0.5 -0.5 0.8660254 0.5 -0.8660254 0.5 0.5 -0.8660254 0.5 -0.5 -1 1.224647e-16 -0.5 -1 1.224647e-16 0.5 -0.8660254 0.5 -0.5 -1 1.224647e-16 0.5 -0.8660254 0.5 0.5 0 0 -0.5 -1 1.224647e-16 -0.5 -0.8660254 0.5 -0.5 0 0 0.5 -0.8660254 0.5 0.5 -1 1.224647e-16 0.5 -1 1.224647e-16 -0.5 -0.8660254 -0.5 -0.5 -0.8660254 -0.5 0.5 -1 1.224647e-16 -0.5 -0.8660254 -0.5 0.5 -1 1.224647e-16 0.5 0 0 -0.5 -0.8660254 -0.5 -0.5 -1 1.224647e-16 -0.5 0 0 0.5 -1 1.224647e-16 0.5 -0.8660254 -0.5 0.5 -0.8660254 -0.5 -0.5 -0.5 -0.8660254 -0.5 -0.5 -0.8660254 0.5 -0.8660254 -0.5 -0.5 -0.5 -0.8660254 0.5 -0.8660254 -0.5 0.5 0 0 -0.5 -0.5 -0.8660254 -0.5 -0.8660254 -0.5 -0.5 0 0 0.5 -0.8660254 -0.5 0.5 -0.5 -0.8660254 0.5 -0.5 -0.8660254 -0.5 -1.83697e-16 -1 -0.5 -1.83697e-16 -1 0.5 -0.5 -0.8660254 -0.5 -1.83697e-16 -1 0.5 -0.5 -0.8660254 0.5 0 0 -0.5 -1.83697e-16 -1 -0.5 -0.5 -0.8660254 -0.5 0 0 0.5 -0.5 -0.8660254 0.5 -1.83697e-16 -1 0.5 -1.83697e-16 -1 -0.5 0.5 -0.8660254 -0.5 0.5 -0.8660254 0.5 -1.83697e-16 -1 -0.5 0.5 -0.8660254 0.5 -1.83697e-16 -1 0.5 0 0 -0.5 0.5 -0.8660254 -0.5 -1.83697e-16 -1 -0.5 0 0 0.5 -1.83697e-16 -1 0.5 0.5 -0.8660254 0.5 0.5 -0.8660254 -0.5 0.8660254 -0.5 -0.5 0.8660254 -0.5 0.5 0.5 -0.8660254 -0.5 0.8660254 -0.5 0.5 0.5 -0.8660254 0.5 0 0 -0.5 0.8660254 -0.5 -0.5 0.5 -0.8660254 -0.5 0 0 0.5 0.5 -0.8660254 0.5 0.8660254 -0.5 0.5 0.8660254 -0.5 -0.5 1 -2.449294e-16 -0.5 1 -2.449294e-16 0.5 0.8660254 -0.5 -0.5 1 -2.449294e-16 0.5 0.8660254 -0.5 0.5 0 0 -0.5 1 -2.449294e-16 -0.5 0.8660254 -0.5 -0.5 0 0 0.5 0.8660254 -0.5 0.5 1 -2.449294e-16 0.5</float_array>
+          <technique_common>
+            <accessor source="#cylinder_positions_array" count="144" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="cylinder_normals">
+          <float_array id="cylinder_normals_array" count="432">0.9659258 0.258819 0 0.9659258 0.258819 0 0.9659258 0.258819 0 0.9659258 0.258819 0 0.9659258 0.258819 0 0.9659258 0.258819 0 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0.7071068 0.7071068 0 0.7071068 0.7071068 0 0.7071068 0.7071068 0 0.7071068 0.7071068 0 0.7071068 0.7071068 0 0.7071068 0.7071068 0 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0.258819 0.9659258 0 0.258819 0.9659258 0 0.258819 0.9659258 0 0.258819 0.9659258 0 0.258819 0.9659258 0 0.258819 0.9659258 0 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -0.258819 0.9659258 0 -0.258819 0.9659258 0 -0.258819 0.9659258 0 -0.258819 0.9659258 0 -0.258819 0.9659258 0 -0.258819 0.9659258 0 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -0.7071068 0.7071068 0 -0.7071068 0.7071068 0 -0.7071068 0.7071068 0 -0.7071068 0.7071068 0 -0.7071068 0.7071068 0 -0.7071068 0.7071068 0 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -0.9659258 0.258819 0 -0.9659258 0.258819 0 -0.9659258 0.258819 0 -0.9659258 0.258819 0 -0.9659258 0.258819 0 -0.9659258 0.258819 0 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -0.9659258 -0.258819 0 -0.9659258 -0.258819 0 -0.9659258 -0.258819 0 -0.9659258 -0.258819 0 -0.9659258 -0.258819 0 -0.9659258 -0.258819 0 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -0.7071068 -0.7071068 0 -0.7071068 -0.7071068 0 -0.7071068 -0.7071068 0 -0.7071068 -0.7071068 0 -0.7071068 -0.7071068 0 -0.7071068 -0.7071068 0 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 -0.258819 -0.9659258 0 -0.258819 -0.9659258 0 -0.258819 -0.9659258 0 -0.258819 -0.9659258 0 -0.258819 -0.9659258 0 -0.258819 -0.9659258 0 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0.258819 -0.9659258 0 0.258819 -0.9659258 0 0.258819 -0.9659258 0 0.258819 -0.9659258 0 0.258819 -0.9659258 0 0.258819 -0.9659258 0 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0.7071068 -0.7071068 0 0.7071068 -0.7071068 0 0.7071068 -0.7071068 0 0.7071068 -0.7071068 0 0.7071068 -0.7071068 0 0.7071068 -0.7071068 0 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0.9659258 -0.258819 0 0.9659258 -0.258819 0 0.9659258 -0.258819 0 0.9659258 -0.258819 0 0.9659258 -0.258819 0 0.9659258 -0.258819 0 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#cylinder_normals_array" count="144" stride="3">
+              <param name="X" type="float" />
+              <param name="Y" type="float" />
+              <param name="Z" type="float" />
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="cylinder_vertices">
+          <input semantic="POSITION" source="#cylinder_positions" />
+        </vertices>
+        <triangles material="paint" count="48">
+          <input semantic="VERTEX" source="#cylinder_vertices" offset="0" />
+          <input semantic="NORMAL" source="#cylinder_normals" offset="1" />
+          <p>0 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19 19 20 20 21 21 22 22 23 23 24 24 25 25 26 26 27 27 28 28 29 29 30 30 31 31 32 32 33 33 34 34 35 35 36 36 37 37 38 38 39 39 40 40 41 41 42 42 43 43 44 44 45 45 46 46 47 47 48 48 49 49 50 50 51 51 52 52 53 53 54 54 55 55 56 56 57 57 58 58 59 59 60 60 61 61 62 62 63 63 64 64 65 65 66 66 67 67 68 68 69 69 70 70 71 71 72 72 73 73 74 74 75 75 76 76 77 77 78 78 79 79 80 80 81 81 82 82 83 83 84 84 85 85 86 86 87 87 88 88 89 89 90 90 91 91 92 92 93 93 94 94 95 95 96 96 97 97 98 98 99 99 100 100 101 101 102 102 103 103 104 104 105 105 106 106 107 107 108 108 109 109 110 110 111 111 112 112 113 113 114 114 115 115 116 116 117 117 118 118 119 119 120 120 121 121 122 122 123 123 124 124 125 125 126 126 127 127 128 128 129 129 130 130 131 131 132 132 133 133 134 134 135 135 136 136 137 137 138 138 139 139 140 140 141 141 142 142 143 143</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="scene_container40_reefer" name="container40_reefer">
+      <node id="assembly_container40_reefer" name="container40_reefer" type="NODE">
+        <node id="part_0000" name="corrugated_shell" type="NODE">
+          <matrix>12.052 0 0 0 0 2.358 0 0 0 0 2.551 0 0 0 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_white" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0001" name="port_rib_00" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -5.816 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0002" name="starboard_rib_00" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -5.816 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0003" name="port_rib_01" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -5.385185 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0004" name="starboard_rib_01" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -5.385185 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0005" name="port_rib_02" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -4.95437 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0006" name="starboard_rib_02" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -4.95437 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0007" name="port_rib_03" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -4.523556 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0008" name="starboard_rib_03" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -4.523556 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0009" name="port_rib_04" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -4.092741 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0010" name="starboard_rib_04" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -4.092741 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0011" name="port_rib_05" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -3.661926 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0012" name="starboard_rib_05" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -3.661926 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0013" name="port_rib_06" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -3.231111 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0014" name="starboard_rib_06" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -3.231111 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0015" name="port_rib_07" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -2.800296 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0016" name="starboard_rib_07" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -2.800296 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0017" name="port_rib_08" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -2.369481 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0018" name="starboard_rib_08" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -2.369481 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0019" name="port_rib_09" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -1.938667 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0020" name="starboard_rib_09" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -1.938667 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0021" name="port_rib_10" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -1.507852 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0022" name="starboard_rib_10" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -1.507852 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0023" name="port_rib_11" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -1.077037 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0024" name="starboard_rib_11" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -1.077037 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0025" name="port_rib_12" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -0.6462222 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0026" name="starboard_rib_12" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -0.6462222 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0027" name="port_rib_13" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -0.2154074 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0028" name="starboard_rib_13" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 -0.2154074 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0029" name="port_rib_14" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 0.2154074 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0030" name="starboard_rib_14" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 0.2154074 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0031" name="port_rib_15" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 0.6462222 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0032" name="starboard_rib_15" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 0.6462222 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0033" name="port_rib_16" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 1.077037 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0034" name="starboard_rib_16" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 1.077037 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0035" name="port_rib_17" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 1.507852 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0036" name="starboard_rib_17" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 1.507852 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0037" name="port_rib_18" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 1.938667 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0038" name="starboard_rib_18" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 1.938667 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0039" name="port_rib_19" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 2.369481 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0040" name="starboard_rib_19" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 2.369481 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0041" name="port_rib_20" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 2.800296 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0042" name="starboard_rib_20" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 2.800296 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0043" name="port_rib_21" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 3.231111 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0044" name="starboard_rib_21" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 3.231111 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0045" name="port_rib_22" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 3.661926 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0046" name="starboard_rib_22" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 3.661926 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0047" name="port_rib_23" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 4.092741 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0048" name="starboard_rib_23" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 4.092741 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0049" name="port_rib_24" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 4.523556 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0050" name="starboard_rib_24" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 4.523556 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0051" name="port_rib_25" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 4.95437 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0052" name="starboard_rib_25" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 4.95437 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0053" name="port_rib_26" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 5.385185 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0054" name="starboard_rib_26" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 5.385185 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0055" name="port_rib_27" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 5.816 -1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0056" name="starboard_rib_27" type="NODE">
+          <matrix>0.035 0 0 0 0 0.018 0 0 0 0 2.391 0 5.816 1.209 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_rib" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0057" name="door_end" type="NODE">
+          <matrix>0.018 0 0 0 0 2.338 0 0 0 0 2.491 0 -6.075 0 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_white" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0058" name="front_end" type="NODE">
+          <matrix>0.018 0 0 0 0 2.338 0 0 0 0 2.491 0 6.075 0 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_white" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0059" name="door_lock_left" type="NODE">
+          <matrix>0.035 0 0 0 0 0.035 0 0 0 0 2.271 0 -6.056 -0.54 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0060" name="door_lock_right" type="NODE">
+          <matrix>0.035 0 0 0 0 0.035 0 0 0 0 2.271 0 -6.056 0.54 1.2955 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0061" name="corner_aft_port_lower" type="NODE">
+          <matrix>0.18 0 0 0 0 0.18 0 0 0 0 0.14 0 -6.006 -1.129 0.07 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0062" name="corner_aft_port_upper" type="NODE">
+          <matrix>0.18 0 0 0 0 0.18 0 0 0 0 0.14 0 -6.006 -1.129 2.521 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0063" name="corner_aft_starboard_lower" type="NODE">
+          <matrix>0.18 0 0 0 0 0.18 0 0 0 0 0.14 0 -6.006 1.129 0.07 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0064" name="corner_aft_starboard_upper" type="NODE">
+          <matrix>0.18 0 0 0 0 0.18 0 0 0 0 0.14 0 -6.006 1.129 2.521 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0065" name="corner_fore_port_lower" type="NODE">
+          <matrix>0.18 0 0 0 0 0.18 0 0 0 0 0.14 0 6.006 -1.129 0.07 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0066" name="corner_fore_port_upper" type="NODE">
+          <matrix>0.18 0 0 0 0 0.18 0 0 0 0 0.14 0 6.006 -1.129 2.521 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0067" name="corner_fore_starboard_lower" type="NODE">
+          <matrix>0.18 0 0 0 0 0.18 0 0 0 0 0.14 0 6.006 1.129 0.07 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0068" name="corner_fore_starboard_upper" type="NODE">
+          <matrix>0.18 0 0 0 0 0.18 0 0 0 0 0.14 0 6.006 1.129 2.521 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0069" name="refrigeration_housing" type="NODE">
+          <matrix>0.38 0 0 0 0 1.98 0 0 0 0 1.72 0 5.876 0 1.63 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_reefer_unit" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0070" name="refrigeration_grille" type="NODE">
+          <matrix>0.022 0 0 0 0 1.66 0 0 0 0 0.93 0 6.078 0 1.78 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel_dark" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0071" name="grille_slit_0" type="NODE">
+          <matrix>0.017 0 0 0 0 1.55 0 0 0 0 0.04 0 6.084 0 1.41 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0072" name="grille_slit_1" type="NODE">
+          <matrix>0.017 0 0 0 0 1.55 0 0 0 0 0.04 0 6.084 0 1.555 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0073" name="grille_slit_2" type="NODE">
+          <matrix>0.017 0 0 0 0 1.55 0 0 0 0 0.04 0 6.084 0 1.7 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0074" name="grille_slit_3" type="NODE">
+          <matrix>0.017 0 0 0 0 1.55 0 0 0 0 0.04 0 6.084 0 1.845 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0075" name="grille_slit_4" type="NODE">
+          <matrix>0.017 0 0 0 0 1.55 0 0 0 0 0.04 0 6.084 0 1.99 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="part_0076" name="grille_slit_5" type="NODE">
+          <matrix>0.017 0 0 0 0 1.55 0 0 0 0 0.04 0 6.084 0 2.135 1</matrix>
+          <instance_geometry url="#geometry_box">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="paint" target="#material_steel" />
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#scene_container40_reefer" />
+  </scene>
+</COLLADA>
